@@ -7,7 +7,7 @@ app.use(cors());
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-const PORT = 3005;
+const PORT = 3000;
 
 app.listen(PORT, () => {
   console.log('Server is listening on: ', PORT);

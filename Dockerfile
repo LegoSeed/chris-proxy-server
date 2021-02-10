@@ -1,13 +1,10 @@
 FROM node:latest
 
-RUN mkdir -p /src/app
-
 WORKDIR /src/app
 
-COPY . /src/app
+COPY . .
+RUN npm install
 
-RUN yarn install
+EXPOSE 3000
 
-EXPOSE 3005
-
-CMD [ "npm", "run", "start" ]
+CMD ["node", "server.js/server.js" ]
